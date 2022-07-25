@@ -260,16 +260,55 @@ p {
         padding: 8rem 8rem;
     }
 }
-.icon {
+.workflow-icon {
     text-align: center;
 }
-.icon h4 {
+.workflow-icon h4 {
     font-size: 2.2rem;
     font-weight: 600;
     margin: 0;
     align-items: center;
     padding: 4rem 0 2rem 0 ;
 }
-.icon p {
+.workflow-icon p {
     margin: 0;
+}
+.icon {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 6rem;
+    padding: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .icon {
+        grid-template-columns: repeat(5, 1fr);
+        padding: 6rem 5rem;
+        row-gap: 0;
+    }
+}
+.icon-img1 {
+    background-image: url(../img/logo-google.png);
+}
+.icon-img2 {
+    background-image: url(../img/logo-ibm.png);
+}
+.icon-img3 {
+    background-image: url(../img/logo-microsoft.png);
+}
+.icon-img4 {
+    background-image: url(../img/logo-hp.png);
+}
+.icon-img5 {
+    background-image: url(../img/logo-vector-graphics.png);
+}
+.icon-img1,
+.icon-img2,
+.icon-img3,
+.icon-img4,
+.icon-img5 {
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 6rem;
 }
