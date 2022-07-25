@@ -8,6 +8,7 @@
     /* Neutral */
     --darkGrayishBlue: hsl(210, 10%, 33%);
     --grayishBlue: hsl(201, 11%, 66%);
+    --footer: hsl(193, 31%, 94%);
 }
 html {
     box-sizing: border-box;
@@ -322,6 +323,54 @@ p {
 @media (min-width: 768px) {
     .download div p {
         margin: 0 25rem; 
+        padding-bottom: 0;
+    }
+}
+.footer {
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+.footer__logo {
+    transform: scale(.45);
+}
+.footer__links {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 2.5rem;
+    text-align: center;
+    padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .footer__links {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 8rem;
+        row-gap: 2rem;
+        text-align: left;
+        padding-right: 30rem;
+        padding-bottom: 0;
+    }
+}
+.footer__links a {
+    color: var(--darkGrayishBlue);
+    font-size: 1.7rem;
+}
+.footer__icon {
+    display: flex;
+    column-gap: 2rem;   
+    padding-bottom: 4rem;
+}
+@media (min-width: 768px) {
+    .footer__icon {
         padding-bottom: 0;
     }
 }
